@@ -1,0 +1,126 @@
+:root {
+    --bg-color: #f0f7fc;
+    --card-bg: #ffffff;
+    --primary: #c1e3ff;
+    --primary-hover: #a6d8ff;
+    --text-color: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border-color: #bce0fd;
+    --danger: #ffb5a7;
+    --danger-hover: #fcd5ce;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container, main {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    width: 100%;
+    max-width: 450px;
+}
+
+h1, h2 {
+    color: #4a90e2;
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 0;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-hover);
+}
+
+button {
+    background-color: var(--primary);
+    color: #2b4c7e;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+li {
+    background-color: #f8fbff;
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+}
+
+li span {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+li.concluida {
+    background-color: #e9f5ed;
+    border-color: #c3e6cb;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+button.remover {
+    background-color: var(--danger);
+    color: #582f29;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    border-radius: 0;
+}
+
+button.remover:hover {
+    background-color: var(--danger-hover);
+}
+
+#mensagem {
+    color: #d90429;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+#contador {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 1rem;
+}
